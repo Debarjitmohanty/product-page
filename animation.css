@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family:'Times New Roman', Times, serif;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background: #eee;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+.container .title{
+    font-size: 3.5rem;
+    color: #fd0000;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+}
+.pro-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 2rem;
+}
+.product{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+.product:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+}
+.product img{
+    width: 25rem;
+    height: 25rem;
+
+}
+.product img:hover{
+    transform: scale(.9);
+}
+.product h3{
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #444;
+    margin-top: 10px;
+}
+.product h3:hover{
+    color: #a544dd;
+}
+.product .price{
+    font-size: 2.2rem;
+    color: #444;
+    margin-top: 10px;
+}
+.product-preview{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+.product-preview .preview{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+}
+.product-preview .preview.active{
+    display: inline-block;
+}
+.product-preview .preview img{
+    height: 25rem;
+    width: 25rem;
+}
+.product-preview .preview .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 3rem;
+}
+.product-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
+}
+.preview h3{
+    color: #444;
+    padding: 3rem 0;
+    font-size: 2.5rem;
+}
+.preview .stars{
+    padding: 1rem 0;
+    font-size: 1.7rem;
+}
+.preview .stars i{
+    color: #27ae60;
+}
+.preview .stars span{
+    color: #999;
+}
+.preview p{
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #777;
+}
+.preview .price{
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: #27ae60;
+
+}
+.preview .buttons{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.preview .buttons a{
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #444;
+    border: 2px solid #444;
+}
+.preview .buttons a.cart{
+    background: #444;
+    color: #fff;
+}
+.preview .buttons a.cart:hover{
+    background: #111;
+}
+.preview .buttons a.buy:hover{
+    background: #444;
+    color: #fff; 
+}
+.fa-indian-rupee-sign{
+    font-size: 20px;
+}
+@media screen and (max-width: 991px) {
+    html{
+        font-size: 55%;
+    }  
+}
+@media screen and (max-width: 768px) {
+    .product-preview .preview img{
+        height: 20rem;
+        width: 20rem;
+    }
+   
+}
+@media screen and (max-width: 450px) {
+    html{
+        font-size: 50%;
+    }  
+}
+
+
+
+
+
+
+
+
+
+
+
+
